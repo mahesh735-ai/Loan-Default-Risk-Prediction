@@ -64,11 +64,14 @@ A lending institution wants to predict, at the time of loan application, whether
 **6. Explainability & Threshold Tuning**
 - Used **SHAP** (TreeExplainer) to interpret global feature importance and individual predictions.
 - Tuned the decision threshold from the default 0.50 to **0.35** using the Precision-Recall curve — improving defaulter recall from 81% to 86%, reflecting that missing a genuine defaulter is costlier to the lender than a false alarm on a safe applicant.
+- 
+## 🌐 Live App
 
-**7. Deployment**
+[Loan Default Risk Prediction — Live Demo](https://loan-default-risk-prediction-jttwmb8pax59wcp2kdh9oh.streamlit.app/)
+
+## Deployment
 - Model serialized in XGBoost's native JSON format (version-safe, avoids pickle corruption issues) alongside a metadata file storing the feature schema and optimal threshold.
 - Deployed as an interactive Streamlit web application for real-time risk assessment.
-
 ---
 
 ## Key Results
